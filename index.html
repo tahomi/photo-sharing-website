@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Premium Photo Sharing Website</title>
+	<link href="src/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<nav>
+				<div id="header"><a id="first">Photo</a>Cage app</div>
+				<!--<div id="navig">
+					<div class="navig"><a href="#">Home</a></div>
+					<div class="navig"><a href="#">Gallery</a></div>
+					<div class="navig"><a href="#">Members</a></div>
+					<div class="navig" style="width: 260px;"><a href="#">Logout</a></div>
+				</div>-->
+				<ul class="menu">
+						<li id="home" onmouseover="
+							document.getElementById('home').className='mouseover';
+						" onmouseout="document.getElementById('home').className=''">
+							<img class="icon" src="src/img/home.gif">
+							<a class="menuText" href="#">
+									Home
+							</a>
+						</li>
+						<li id="gallery" onmouseover="
+						document.getElementById('gallery').className='mouseover'"
+						onmouseout="document.getElementById('gallery').className=''">
+						<img class="icon" src="src/img/gallery.gif">
+							<a class="menuText" href="#">
+									Gallery
+							</a>
+						</li>
+						<li id="members" onmouseover="
+						document.getElementById('members').className='mouseover'"
+						onmouseout="document.getElementById('members').className=''">
+						<img class="icon" src="src/img/members.gif">
+							<a class="menuText" href="#">
+									Members
+							</a>
+						</li>
+						<li id="end" onmouseover="
+						document.getElementById('end').className='mouseover'"
+						onmouseout="document.getElementById('end').className=''">
+						<img class="icon" src="src/img/end.gif">
+							<a class="menuText" href="#">
+									Logout
+							</a>
+						</li>
+					</ul>
+			</nav>
+
+		</header>
+		<main>
+			<span id="searchText" >
+					Please select an image from your computer
+			</span><br>
+			<div id="photoAdder">
+				<input id="input" type="text">
+				<label for="fileUpload" class="custom-file-upload"/>
+
+					</label>
+					<input style="display: none;" id="fileUpload" type="file" onchange="input.value = this.value" />
+				<button id="upload" onclick="
+
+					photoAdder(input.value)
+				"></button>
+			</div>
+		</main>
+		<div id="content"></div>
+		<footer>
+			<p id="footer-text">© 2013 Photocage app  powered by cssauthor.com</p>
+		</footer>
+	</div>
+
+</body>
+<script src="src/script.js"></script>
+</html>
